@@ -41,19 +41,19 @@ export const Photos = () => {
   const cards = [
     {
       title: "種類豊富な新鮮なお肉",
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      text: "なんといってもホルモンが旨い！安い！早い！他にはない味、ホルモン好きには是非食べてほしい逸品をご提供しております。特製だれホルモンや、レバーと一緒にビールやチューハイで一杯。どんどんお酒がすすんじゃう、至福のひと時を味わってください。",
       image:
         "https://images.unsplash.com/photo-1494566942107-a6e23c42d69e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
     },
     {
       title: "サイドメニューも充実",
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      text: "ぜひ味わってほしいです！やみつきになるのまちがいなし。ごはんにもお酒にも合います！",
       image:
         "https://images.unsplash.com/photo-1606188629504-fb9c89e61ccc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
     },
     {
       title: "アルコール類も充実の品揃え",
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+      text: "焼肉と一緒にお酒を嗜む...そんなひと時をお楽しみください。焼酎はボトルもご用意しております。",
       image:
         "https://images.unsplash.com/photo-1580775174971-149b403a7e0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
     },
@@ -135,7 +135,7 @@ export const Photos = () => {
                   <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
                     {card.title}
                   </Heading>
-                  <Text fontSize={{ base: "md", lg: "lg" }} color="GrayText">
+                  <Text fontSize={{ base: "md", lg: "lg" }} color="black">
                     {card.text}
                   </Text>
                 </Stack>
