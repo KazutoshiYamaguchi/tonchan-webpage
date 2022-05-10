@@ -9,10 +9,12 @@ import {
   Tr,
 } from "@chakra-ui/react";
 import React from "react";
+import { Hero } from "../atoms/Hero";
 
 export const Access = () => {
   return (
     <>
+      <Hero />
       <Box m={5} display="flex" justifyContent="center" alignItems="center">
         <Heading as="h1" color={"red.400"}>
           -アクセス-

@@ -1,5 +1,7 @@
 import React from "react";
 import { Access } from "../components/pages/Access";
+import { Auth } from "../components/pages/commentPages/Auth";
+import { Kuchikomi } from "../components/pages/commentPages/Kuchikomi";
 import { Drink } from "../components/pages/Drink";
 import { Home } from "../components/pages/Home";
 import { Menu } from "../components/pages/Menu";
@@ -31,6 +33,16 @@ export const HomeRoutes = [
     path: "access",
     index: false,
     children: <Access />,
+  },
+  {
+    path: "kuchikomi",
+    index: false,
+    children: <Kuchikomi />,
+  },
+  {
+    path: "auth",
+    index: false,
+    children: <Auth />,
   },
   {
     path: "*",

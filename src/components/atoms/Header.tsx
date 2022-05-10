@@ -25,6 +25,10 @@ export const Header = () => {
     history.push("/access");
     onClose();
   }, [history]);
+  const onClickKuchikomi = useCallback(() => {
+    history.push("/kuchikomi");
+    onClose();
+  }, [history]);
   return (
     <>
       <Flex
@@ -64,6 +68,9 @@ export const Header = () => {
           <Box pr={4}>
             <Link onClick={onClickAccess}>アクセス</Link>
           </Box>
+          <Box pr={4}>
+            <Link onClick={onClickKuchikomi}>口コミ</Link>
+          </Box>
         </Flex>
         <MenuIconButton onOpen={onOpen} />
       </Flex>
@@ -74,6 +81,7 @@ export const Header = () => {
         onClickPhotos={onClickPhotos}
         onClickMenu={onClickMenu}
         onClickAccess={onClickAccess}
+        onClickKuchikomi={onClickKuchikomi}
       />
     </>
   );

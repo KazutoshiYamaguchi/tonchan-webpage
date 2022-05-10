@@ -13,6 +13,7 @@ import {
   Tr,
 } from "@chakra-ui/react";
 import { useHistory } from "react-router";
+import { Hero } from "../atoms/Hero";
 
 import { Menus } from "../atoms/menu/Menus";
 
@@ -21,6 +22,7 @@ export const Menu = () => {
   const onClickDrink = () => history.push("/drink");
   return (
     <>
+      <Hero />
       <Flex justify={"center"} alignItems="center" gap={2} m={5}>
         <Button
           rightIcon={<ArrowForwardIcon />}
