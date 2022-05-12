@@ -40,7 +40,7 @@ export const HomeFoodMenu = () => {
               安くて、美味しい炭火焼肉、ホルモン屋さん
             </Text>
           </Heading>
-          <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
+          <Text fontSize={{ base: "md", lg: "lg" }}>
             地元で65年間愛され続けている老舗の炭火焼肉、ホルモン屋さんです。
             美味しいお肉をお腹一杯食べていただきたいため、お手頃価格で提供致します。
             食べるべき一品は焼肉（カシラ）是非、ご堪能ください。

@@ -173,7 +173,7 @@ export const Auth: React.FC = () => {
                     required
                     fullWidth
                     id="username"
-                    label="Username"
+                    label="ユーザー名"
                     name="username"
                     autoComplete="username"
                     autoFocus
@@ -209,7 +209,7 @@ export const Auth: React.FC = () => {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label="メールアドレス"
                 name="email"
                 autoComplete="email"
                 autoFocus
@@ -224,7 +224,7 @@ export const Auth: React.FC = () => {
                 required
                 fullWidth
                 name="password"
-                label="Password"
+                label="パスワード"
                 type="password"
                 id="password"
                 autoComplete="current-password"
@@ -263,7 +263,7 @@ export const Auth: React.FC = () => {
                       }
                 }
               >
-                {isLogin ? "Login" : "Register"}
+                {isLogin ? "ログイン" : "新規登録"}
               </Button>
               <Grid container>
                 <Grid item xs>
@@ -271,7 +271,7 @@ export const Auth: React.FC = () => {
                     className={styles.login_reset}
                     onClick={() => setOpenModal(true)}
                   >
-                    forgot password?
+                    パスワード忘れましたか?
                   </span>
                 </Grid>
                 <Grid item>
@@ -279,7 +279,7 @@ export const Auth: React.FC = () => {
                     className={styles.login_toggleMode}
                     onClick={() => setIsLogin(!isLogin)}
                   >
-                    {isLogin ? "Create new account?" : "Back to login"}
+                    {isLogin ? "新規登録画面" : "ログイン画面に戻る"}
                   </span>
                 </Grid>
               </Grid>
@@ -291,7 +291,7 @@ export const Auth: React.FC = () => {
                 onClick={signInGoogle}
                 startIcon={<CameraIcon />}
               >
-                Sign In With Google
+                Googleでログイン
               </Button>
             </form>
             <Modal open={openModal} onClose={() => setOpenModal(false)}>
@@ -303,7 +303,7 @@ export const Auth: React.FC = () => {
                     }}
                     type="email"
                     name="email"
-                    label="Reset E-mail"
+                    label="メールリセット"
                     value={resetEmail}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                       setResetEmail(e.target.value);

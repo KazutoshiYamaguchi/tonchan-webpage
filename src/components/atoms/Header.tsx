@@ -4,6 +4,7 @@ import { useHistory } from "react-router";
 
 import { MenuDrawer } from "../molecule/MenuDrawer";
 import { MenuIconButton } from "./button/MenuIconButton";
+import styles from "./Header.module.css";
 
 export const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -33,7 +34,7 @@ export const Header = () => {
     <>
       <Flex
         as="nav"
-        bg="teal.500"
+        bg="red.900"
         color="gray.50"
         align="center"
         justify="space-between"
@@ -46,7 +47,11 @@ export const Header = () => {
           _hover={{ cursor: "pointer" }}
           onClick={onClickHome}
         >
-          <Heading as="h1" fontSize={{ base: "md", md: "lg" }}>
+          <Heading
+            as="h1"
+            fontSize={{ base: "md", md: "lg" }}
+            className={styles.title}
+          >
             平和軒山口とんちゃん
           </Heading>
         </Flex>

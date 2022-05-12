@@ -1,5 +1,6 @@
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import {
+  Box,
   Button,
   Flex,
   Heading,
@@ -23,49 +24,51 @@ export const Menu = () => {
   return (
     <>
       <Hero />
-      <Flex justify={"center"} alignItems="center" gap={2} m={5}>
-        <Button
-          rightIcon={<ArrowForwardIcon />}
-          colorScheme="blue"
-          variant="outline"
-        >
-          お料理
-        </Button>
-        <Button
-          rightIcon={<ArrowForwardIcon />}
-          colorScheme="green"
-          variant="outline"
-          onClick={onClickDrink}
-        >
-          お飲み物
-        </Button>
-      </Flex>
+      <Box style={{ maxWidth: "70%", margin: "auto" }}>
+        <Flex justify={"center"} alignItems="center" gap={2} m={5}>
+          <Button
+            rightIcon={<ArrowForwardIcon />}
+            colorScheme="blue"
+            variant="outline"
+          >
+            お料理
+          </Button>
+          <Button
+            rightIcon={<ArrowForwardIcon />}
+            colorScheme="green"
+            variant="outline"
+            onClick={onClickDrink}
+          >
+            お飲み物
+          </Button>
+        </Flex>
 
-      {Menus.map((menu, index) => (
-        <TableContainer key={index}>
-          <Table variant="simple">
-            <Thead>
-              <Tr>
-                <Th>
-                  <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-                    <Text color={"blue.400"} as="h3">
-                      {menu.title}
-                    </Text>
-                  </Heading>
-                </Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              {menu.menus.map((m, i) => (
-                <Tr key={i}>
-                  <Td>{m.name}</Td>
-                  <Td>{m.price} </Td>
+        {Menus.map((menu, index) => (
+          <TableContainer key={index}>
+            <Table variant="simple">
+              <Thead>
+                <Tr>
+                  <Th>
+                    <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
+                      <Text color={"blue.400"} as="h3">
+                        {menu.title}
+                      </Text>
+                    </Heading>
+                  </Th>
                 </Tr>
-              ))}
-            </Tbody>
-          </Table>
-        </TableContainer>
-      ))}
+              </Thead>
+              <Tbody>
+                {menu.menus.map((m, i) => (
+                  <Tr key={i}>
+                    <Td>{m.name}</Td>
+                    <Td>{m.price} </Td>
+                  </Tr>
+                ))}
+              </Tbody>
+            </Table>
+          </TableContainer>
+        ))}
+      </Box>
     </>
   );
 };

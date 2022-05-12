@@ -38,7 +38,7 @@ export const HomeDrinkMenu = () => {
             </Text>
             <br /> <Text color={"green.400"} as={"span"}></Text>{" "}
           </Heading>
-          <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
+          <Text fontSize={{ base: "md", lg: "lg" }}>
             焼肉と一緒にお酒を嗜む...そんなひと時をお楽しみください。
             焼酎はボトルもご用意しております。
           </Text>

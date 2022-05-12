@@ -6,6 +6,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
+import styles from "./Header.module.css";
 
 export const Hero = () => {
   return (
@@ -28,6 +29,7 @@ export const Hero = () => {
             fontWeight={700}
             lineHeight={1.2}
             fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
+            className={styles.title}
           >
             平和軒山口とんちゃん
           </Text>
