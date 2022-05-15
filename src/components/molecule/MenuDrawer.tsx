@@ -16,6 +16,7 @@ type Props = {
   onClickMenu: () => void;
   onClickAccess: () => void;
   onClickKuchikomi: () => void;
+  onClickGithub: () => void;
 };
 
 export const MenuDrawer: FC<Props> = memo((props) => {
@@ -27,6 +28,7 @@ export const MenuDrawer: FC<Props> = memo((props) => {
     onClickMenu,
     onClickAccess,
     onClickKuchikomi,
+    onClickGithub,
   } = props;
   return (
     <Drawer isOpen={isOpen} onClose={onClose} placement="left" size="xs">
@@ -34,21 +36,24 @@ export const MenuDrawer: FC<Props> = memo((props) => {
       <DrawerContent>
         <DrawerCloseButton />
 
-        <DrawerBody p="0" bg={"gray.100"}>
-          <Button w="100%" onClick={onClickHome}>
+        <DrawerBody p="0" bg={"red.900"}>
+          <Button w="100%" bg={"gray.600"} onClick={onClickHome}>
             ホーム
           </Button>
-          <Button w="100%" onClick={onClickPhotos}>
+          <Button w="100%" bg={"gray.600"} onClick={onClickPhotos}>
             写真
           </Button>
-          <Button w="100%" onClick={onClickMenu}>
+          <Button w="100%" bg={"gray.600"} onClick={onClickMenu}>
             メニュー
           </Button>
-          <Button w="100%" onClick={onClickAccess}>
+          <Button w="100%" bg={"gray.600"} onClick={onClickAccess}>
             アクセス
           </Button>
-          <Button w="100%" onClick={onClickKuchikomi}>
+          <Button w="100%" bg={"gray.600"} onClick={onClickKuchikomi}>
             口コミ
+          </Button>
+          <Button w="100%" bg={"gray.600"} onClick={onClickGithub}>
+            Github
           </Button>
         </DrawerBody>
       </DrawerContent>

@@ -1,6 +1,12 @@
+import subHero from "../../../images/FoodHero.jpeg";
+import vages from "../../../images/veges.jpeg";
+import rice from "../../../images/rice.jpeg";
+import soup from "../../../images/soup.jpeg";
+
 export const Menus = [
   {
     title: "お肉",
+    image: subHero,
     menus: [
       {
         name: "ホルモン",
@@ -51,6 +57,7 @@ export const Menus = [
 
   {
     title: "野菜等",
+    image: vages,
     menus: [
       {
         name: "レタス",
@@ -112,6 +119,7 @@ export const Menus = [
   },
   {
     title: "ご飯物",
+    image: rice,
     menus: [
       {
         name: "ビビンパ",
@@ -137,6 +145,7 @@ export const Menus = [
   },
   {
     title: "スープ",
+    image: soup,
     menus: [
       {
         name: "ワカメスープ",

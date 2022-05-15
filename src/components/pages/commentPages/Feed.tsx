@@ -45,7 +45,7 @@ export const Feed: React.FC = () => {
       <div className={styles.feed}>
         {!user.uid ? (
           <Button
-            style={{ backgroundColor: "gray.400", color: "navy" }}
+            style={{ backgroundColor: "gray.400", color: "red" }}
             onClick={() => history.push("/auth")}
           >
             ログイン

@@ -8,6 +8,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { useHistory } from "react-router";
+import drinkImage from "../../../images/alchoholeImage.jpeg";
 
 export const HomeDrinkMenu = () => {
   const history = useHistory();
@@ -30,13 +31,12 @@ export const HomeDrinkMenu = () => {
                 position: "absolute",
                 bottom: 1,
                 left: 0,
-                bg: "green.400",
+                bg: "red.800",
                 zIndex: -1,
               }}
             >
               お飲物も豊富
             </Text>
-            <br /> <Text color={"green.400"} as={"span"}></Text>{" "}
           </Heading>
           <Text fontSize={{ base: "md", lg: "lg" }}>
             焼肉と一緒にお酒を嗜む...そんなひと時をお楽しみください。
@@ -45,10 +45,10 @@ export const HomeDrinkMenu = () => {
           <Stack direction={{ base: "column", md: "row" }} spacing={4}>
             <Button
               rounded={"full"}
-              bg={"green.400"}
+              bg={"red.800"}
               color={"white"}
               _hover={{
-                bg: "green.500",
+                bg: "red.900",
               }}
               onClick={onClickDrink}
             >
@@ -61,9 +61,7 @@ export const HomeDrinkMenu = () => {
         <Image
           alt={"Login Image"}
           objectFit={"cover"}
-          src={
-            "https://images.unsplash.com/photo-1591243315780-978fd00ff9db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-          }
+          src={drinkImage}
           borderRadius={10}
         />
       </Flex>

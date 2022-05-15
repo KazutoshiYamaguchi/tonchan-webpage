@@ -4,3 +4,15 @@
   padding: 30px 80px;
   background-color: #444447;
 }
+@media screen and (max-width: 700px) {
+  /* 959px以下に適用されるCSS（タブレット用） */
+  .app {
+    padding: 10px 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* 480px以下に適用されるCSS（スマホ用） */
+  .app {
+    padding: 3px 5px;
+  }
+}

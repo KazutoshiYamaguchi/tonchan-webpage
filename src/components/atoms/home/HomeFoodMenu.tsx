@@ -8,6 +8,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { useHistory } from "react-router";
+import foodImage from "../../../images/HomeFoodImage.jpeg";
 
 export const HomeFoodMenu = () => {
   const history = useHistory();
@@ -29,14 +30,14 @@ export const HomeFoodMenu = () => {
                 position: "absolute",
                 bottom: 1,
                 left: 0,
-                bg: "blue.400",
+                bg: "red.800",
                 zIndex: -1,
               }}
             >
               地元に愛される
             </Text>
             <br />
-            <Text color={"blue.400"} as={"span"}>
+            <Text color={"red.500"} as={"span"}>
               安くて、美味しい炭火焼肉、ホルモン屋さん
             </Text>
           </Heading>
@@ -48,10 +49,10 @@ export const HomeFoodMenu = () => {
           <Stack direction={{ base: "column", md: "row" }} spacing={4}>
             <Button
               rounded={"full"}
-              bg={"blue.400"}
+              bg={"red.800"}
               color={"white"}
               _hover={{
-                bg: "blue.500",
+                bg: "red.900",
               }}
               onClick={onClickMenu}
             >
@@ -64,9 +65,7 @@ export const HomeFoodMenu = () => {
         <Image
           alt={"Login Image"}
           objectFit={"cover"}
-          src={
-            "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-          }
+          src={foodImage}
           borderRadius={10}
         />
       </Flex>

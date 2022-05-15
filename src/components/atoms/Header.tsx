@@ -30,6 +30,12 @@ export const Header = () => {
     history.push("/kuchikomi");
     onClose();
   }, [history]);
+  const onClickGithub = useCallback(() => {
+    window.location.replace(
+      "https://github.com/KazutoshiYamaguchi/tonchan-webpage"
+    );
+    onClose();
+  }, [history]);
   return (
     <>
       <Flex
@@ -76,6 +82,11 @@ export const Header = () => {
           <Box pr={4}>
             <Link onClick={onClickKuchikomi}>口コミ</Link>
           </Box>
+          <Box pr={4}>
+            <Link href="https://github.com/KazutoshiYamaguchi/tonchan-webpage">
+              Github
+            </Link>
+          </Box>
         </Flex>
         <MenuIconButton onOpen={onOpen} />
       </Flex>
@@ -87,6 +98,7 @@ export const Header = () => {
         onClickMenu={onClickMenu}
         onClickAccess={onClickAccess}
         onClickKuchikomi={onClickKuchikomi}
+        onClickGithub={onClickGithub}
       />
     </>
   );

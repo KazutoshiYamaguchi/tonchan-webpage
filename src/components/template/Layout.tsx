@@ -11,7 +11,6 @@ export const Layout: React.FC<Props> = (props) => {
   return (
     <>
       <Header />
-
       <div>{children}</div>
       <Footer />
     </>

@@ -12,7 +12,8 @@ import {
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 // And react-slick as our Carousel Lib
 import Slider from "react-slick";
-import { Hero } from "../atoms/Hero";
+import { SubHero } from "../atoms/Subhero";
+import subhero from "../../images/hero.jpeg";
 
 // Settings for the slider
 const settings = {
@@ -62,13 +63,8 @@ export const Photos = () => {
 
   return (
     <>
-      <Hero />
-      <Box style={{ maxWidth: "70%", margin: "auto" }}>
-        <Box m={5} display="flex" justifyContent="center" alignItems="center">
-          <Heading as="h1" color={"blue.400"}>
-            -写真-
-          </Heading>
-        </Box>
+      <SubHero image={subhero} text="- 写真 -" />
+      <Box maxWidth={{ base: "100%", md: "70%" }} m="auto">
         <Box
           position={"relative"}
           height={"600px"}

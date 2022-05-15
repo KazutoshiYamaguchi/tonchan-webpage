@@ -1,6 +1,11 @@
+import beer from "../../../images/beer.jpeg";
+import alchohole from "../../../images/alchohole.jpeg";
+import softDrinks from "../../../images/softDrinks.jpeg";
+
 export const Drinks = [
   {
     title: "ビール",
+    image: beer,
     menus: [
       {
         name: "瓶ビール",
@@ -18,6 +23,7 @@ export const Drinks = [
   },
   {
     title: "その他お酒",
+    image: alchohole,
     menus: [
       {
         name: "焼酎（ボトル）",
@@ -79,6 +85,7 @@ export const Drinks = [
   },
   {
     title: "ソフトドリンク",
+    image: softDrinks,
     menus: [
       {
         name: "ウーロン茶・緑茶",
