@@ -8,9 +8,11 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { useHistory } from "react-router";
+import { Parallax } from "react-scroll-parallax";
+
 import drinkImage from "../../../images/alchoholeImage.jpeg";
 
-export const HomeDrinkMenu = () => {
+export const HomeDrinkMenu: React.FC = () => {
   const history = useHistory();
 
   const onClickDrink = () => {
@@ -57,6 +59,7 @@ export const HomeDrinkMenu = () => {
           </Stack>
         </Stack>
       </Flex>
+
       <Flex flex={1}>
         <Image
           alt={"Login Image"}
