@@ -52,7 +52,7 @@ export const Feed: React.FC = () => {
           </Button>
         ) : (
           <Button
-            style={{ backgroundColor: "gray.400", color: "navy" }}
+            style={{ backgroundColor: "gray.400", color: "red" }}
             onClick={async () => await auth.signOut()}
           >
             ログアウト

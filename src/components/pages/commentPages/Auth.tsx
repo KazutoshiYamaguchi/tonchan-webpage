@@ -92,6 +92,8 @@ export const Auth: React.FC = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [openModal, setOpenModal] = useState(false);
   const [resetEmail, setResetEmail] = useState("");
+  //Localization here
+  auth.useDeviceLanguage();
 
   const sendResetEmail = async (e: React.MouseEvent<HTMLElement>) => {
     await auth
