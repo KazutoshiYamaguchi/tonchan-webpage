@@ -7,6 +7,7 @@ import { Home } from "../components/pages/Home";
 import { Menu } from "../components/pages/Menu";
 import { Page404 } from "../components/pages/Page404";
 import { Photos } from "../components/pages/Photos";
+import { Photos2 } from "../components/pages/Photos2";
 
 export const HomeRoutes = [
   {
@@ -17,7 +18,7 @@ export const HomeRoutes = [
   {
     path: "photos",
     index: false,
-    children: <Photos />,
+    children: <Photos2 />,
   },
   {
     path: "menu",
