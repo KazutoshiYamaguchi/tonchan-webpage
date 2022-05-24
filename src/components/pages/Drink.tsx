@@ -51,8 +51,10 @@ export const Drink = () => {
                 <Tbody>
                   {menu.menus.map((m, i) => (
                     <Tr key={i}>
-                      <Td>{m.name}</Td>
-                      <Td>{m.price} </Td>
+                      <Td style={{ width: "370px", textAlign: "left" }}>
+                        {m.name}
+                      </Td>
+                      <Td style={{ textAlign: "left" }}>{m.price} </Td>
                     </Tr>
                   ))}
                 </Tbody>

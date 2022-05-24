@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
 import { Footer } from "../atoms/Footer";
 import { Header } from "../atoms/Header";
@@ -11,6 +12,7 @@ export const Layout: React.FC<Props> = (props) => {
   return (
     <>
       <Header />
+      <Box style={{ height: "60px" }}></Box>
       <div>{children}</div>
       <Footer />
     </>

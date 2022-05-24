@@ -8,26 +8,28 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react";
 import { FaInstagram } from "react-icons/fa";
-import { ReactNode } from "react";
+import { ReactNode, useCallback } from "react";
 
 const SocialButton = ({
   children,
   label,
-  href,
+
+  onClick,
 }: {
   children: ReactNode;
   label: string;
-  href: string;
+
+  onClick: () => void;
 }) => {
   return (
     <chakra.button
+      onClick={onClick}
       bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
       rounded={"full"}
       w={8}
       h={8}
       cursor={"pointer"}
       as={"a"}
-      href={href}
       display={"inline-flex"}
       alignItems={"center"}
       justifyContent={"center"}
@@ -43,6 +45,9 @@ const SocialButton = ({
 };
 
 export const Footer = () => {
+  const onClickInstagram = useCallback(() => {
+    window.open("https://www.instagram.com/heiwaken_1954/");
+  }, []);
   return (
     <Box
       bg={useColorModeValue("red.900", "red.900")}
@@ -59,10 +64,7 @@ export const Footer = () => {
       >
         <Text>© 2022 Yamaguchi Tonchan. All rights reserved</Text>
         <Stack direction={"row"} spacing={6}>
-          <SocialButton
-            label={"Instagram"}
-            href={"https://www.instagram.com/heiwaken_1954/"}
-          >
+          <SocialButton label={"Instagram"} onClick={onClickInstagram}>
             <FaInstagram />
           </SocialButton>
         </Stack>

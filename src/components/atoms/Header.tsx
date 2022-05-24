@@ -1,4 +1,13 @@
-import { Box, Flex, Heading, Link, useDisclosure } from "@chakra-ui/react";
+import {
+  Box,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  Flex,
+  Heading,
+  Link,
+  useDisclosure,
+} from "@chakra-ui/react";
 import React, { useCallback } from "react";
 import { useHistory } from "react-router";
 
@@ -31,14 +40,13 @@ export const Header = () => {
     onClose();
   }, [history]);
   const onClickGithub = useCallback(() => {
-    window.location.replace(
-      "https://github.com/KazutoshiYamaguchi/tonchan-webpage"
-    );
-    onClose();
-  }, [history]);
+    window.open("https://github.com/KazutoshiYamaguchi/tonchan-webpage");
+  }, []);
   return (
     <>
       <Flex
+        style={{ position: "fixed", width: "100%", top: 0 }}
+        zIndex={1}
         as="nav"
         bg="red.900"
         color="gray.50"
@@ -67,26 +75,30 @@ export const Header = () => {
           display={{ base: "none", md: "flex" }}
           flexGrow={2}
         >
-          <Box pr={4}>
-            <Link onClick={onClickHome}>ホーム</Link>
-          </Box>
-          <Box pr={4}>
-            <Link onClick={onClickPhotos}>写真</Link>
-          </Box>
-          <Box pr={4}>
-            <Link onClick={onClickMenu}>メニュー</Link>
-          </Box>
-          <Box pr={4}>
-            <Link onClick={onClickAccess}>アクセス</Link>
-          </Box>
-          <Box pr={4}>
-            <Link onClick={onClickKuchikomi}>口コミ</Link>
-          </Box>
-          <Box pr={4}>
-            <Link href="https://github.com/KazutoshiYamaguchi/tonchan-webpage">
-              Github
-            </Link>
-          </Box>
+          <Breadcrumb>
+            <BreadcrumbItem>
+              <BreadcrumbLink onClick={onClickHome}>ホーム</BreadcrumbLink>
+            </BreadcrumbItem>
+
+            <BreadcrumbItem>
+              <BreadcrumbLink as={Link} onClick={onClickPhotos}>
+                写真
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+
+            <BreadcrumbItem>
+              <BreadcrumbLink onClick={onClickMenu}>メニュー</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbItem>
+              <BreadcrumbLink onClick={onClickAccess}>アクセス</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbItem>
+              <BreadcrumbLink onClick={onClickKuchikomi}>口コミ</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbItem isCurrentPage>
+              <BreadcrumbLink onClick={onClickGithub}>Github</BreadcrumbLink>
+            </BreadcrumbItem>
+          </Breadcrumb>
         </Flex>
         <MenuIconButton onOpen={onOpen} />
       </Flex>
